@@ -12,7 +12,7 @@ public class SoftAssertionPageTests {
         open("https://github.com");
 
         $("[name='q']").setValue("selenide").pressEnter();
-        $$("ul.repo-list li").first().$("a").click();
+        $(".repo-list a").click();
         $("[data-content='Wiki']").click();
 
         $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
